@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[The tests have found to have been passed !!]]>
+    </line>
+    <line>
+      <![CDATA[The tests have found to have been passed !!]]>
+    </line>
+    <line>
+      <![CDATA[The tests have found to have been passed !!]]>
+    </line>
+    <line>
+      <![CDATA[The tests have found to have been passed !!]]>
+    </line>
+    <line>
+      <![CDATA[The tests have found to have been passed !!]]>
+    </line>
+    <line>
+      <![CDATA[The tests have found to have been passed !!]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-11-07T01:12:40 IST" name="Suite" finished-at="2023-11-07T01:13:35 IST" duration-ms="54776">
+    <groups>
+    </groups>
+    <test started-at="2023-11-07T01:12:40 IST" name="Test" finished-at="2023-11-07T01:13:35 IST" duration-ms="54776">
+      <class name="com.avirtusaa.MainTestRunner">
+        <test-method signature="name(java.lang.String,java.lang.String)[pri:0, instance:com.avirtusaa.MainTestRunner@4163f1cd]" started-at="2023-11-07T01:12:41 IST" name="name" data-provider="User Credentials" finished-at="2023-11-07T01:13:08 IST" duration-ms="26979" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The tests have found to have been passed !!]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- name -->
+        <test-method signature="name(java.lang.String,java.lang.String)[pri:0, instance:com.avirtusaa.MainTestRunner@4163f1cd]" started-at="2023-11-07T01:13:08 IST" name="name" data-provider="User Credentials" finished-at="2023-11-07T01:13:10 IST" duration-ms="1871" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[locked_out_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The tests have found to have been passed !!]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- name -->
+        <test-method signature="name(java.lang.String,java.lang.String)[pri:0, instance:com.avirtusaa.MainTestRunner@4163f1cd]" started-at="2023-11-07T01:13:10 IST" name="name" data-provider="User Credentials" finished-at="2023-11-07T01:13:14 IST" duration-ms="4657" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[problem_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The tests have found to have been passed !!]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- name -->
+        <test-method signature="name(java.lang.String,java.lang.String)[pri:0, instance:com.avirtusaa.MainTestRunner@4163f1cd]" started-at="2023-11-07T01:13:14 IST" name="name" data-provider="User Credentials" finished-at="2023-11-07T01:13:24 IST" duration-ms="9786" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[performance_glitch_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The tests have found to have been passed !!]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- name -->
+        <test-method signature="name(java.lang.String,java.lang.String)[pri:0, instance:com.avirtusaa.MainTestRunner@4163f1cd]" started-at="2023-11-07T01:13:24 IST" name="name" data-provider="User Credentials" finished-at="2023-11-07T01:13:29 IST" duration-ms="4815" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[error_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The tests have found to have been passed !!]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- name -->
+        <test-method signature="name(java.lang.String,java.lang.String)[pri:0, instance:com.avirtusaa.MainTestRunner@4163f1cd]" started-at="2023-11-07T01:13:29 IST" name="name" data-provider="User Credentials" finished-at="2023-11-07T01:13:34 IST" duration-ms="4695" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[visual_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The tests have found to have been passed !!]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- name -->
+        <test-method is-config="true" signature="closeAllTests()[pri:0, instance:com.avirtusaa.MainTestRunner@4163f1cd]" started-at="2023-11-07T01:13:34 IST" name="closeAllTests" finished-at="2023-11-07T01:13:35 IST" duration-ms="1022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAllTests -->
+      </class> <!-- com.avirtusaa.MainTestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

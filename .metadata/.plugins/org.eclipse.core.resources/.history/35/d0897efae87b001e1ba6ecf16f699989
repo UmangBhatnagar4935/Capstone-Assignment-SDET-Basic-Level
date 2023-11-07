@@ -1,0 +1,130 @@
+
+
+
+//		author                                    Umang Bhatnagar     @umangbhatnagar@virtusa.com
+//		*************************************     Here the whole script is written keeping MACOS		    *************************************
+//		*************************************	  in mind. "MMTUtilityMethods" class has been written	    *************************************			
+//		*************************************	  for the low level implementation by segregating into 	    *************************************
+//		*************************************	  different methods. These methods are later called   	    *************************************
+//		*************************************	  as in need in class "MMTChromeAndFireFox"	to come		    *************************************
+//		*************************************	  up with a meaningful script as asked for.					*************************************
+
+
+
+
+package com.avirtusaa;
+
+import org.apache.commons.lang3.ObjectUtils.Null;
+import org.openqa.selenium.WebElement;
+
+
+public class TestDriverClass {
+
+	
+	
+	private String loginErrorText, pageTitle = null;
+	private BaseUtilitiesTestClass baseUtilitiesTestClassI;
+	private String userNameSet, passwordSet = null;
+	private WebElement useName, passwordThrown, login, errorLogin = null;
+	
+
+
+	public TestDriverClass()
+	
+	{
+		System.out.println("TestDriverClass class k consutructor k andar hun aur");
+		System.out.println("*************isne bheja*******************: "+ new Throwable().getStackTrace()[1].getClassName());
+		
+		this.baseUtilitiesTestClassI = new BaseUtilitiesTestClass("Chrome", 2000); 
+		
+		
+	}
+
+	
+	
+	public String sauceDemoTestDriverInitializer(String userNameDataProvided, String passwordDataProvided) throws InterruptedException
+	{
+		
+		Thread.sleep(3000);
+		System.err.println("Username: "+userNameDataProvided+ '\t'+ '\t'+ '\t'+ '\t' + "Password: "+passwordDataProvided);
+		this.userNameSet = userNameDataProvided;
+		this.passwordSet = passwordDataProvided;
+		baseUtilitiesTestClassI.maximizeBrowser();
+		baseUtilitiesTestClassI.visitPage("https://www.saucedemo.com/");
+		
+		this.useName = baseUtilitiesTestClassI.elementGrabber("//input[@id = 'user-name']");
+		this.passwordThrown = baseUtilitiesTestClassI.elementGrabber("//input[@id = 'password']"); 
+		this.login =  baseUtilitiesTestClassI.elementGrabber("//input[@id = 'login-button']"); 
+	
+		
+		
+	}
+	
+	public void some1()
+	{
+		
+		
+		//Entering credentials 
+		baseUtilitiesTestClassI.typeStringValues(useName, userNameSet);
+		baseUtilitiesTestClassI.typeStringValues(passwordThrown, passwordSet);
+		
+		//Logging in
+		baseUtilitiesTestClassI.waitForAnElement(login);
+		baseUtilitiesTestClassI.clickTheElement(login);
+	}
+	
+	
+		
+		if(userNameDataProvided.equals("locked_out_user"))
+		{
+			this.errorLogin = baseUtilitiesTestClassI.elementGrabber("//h3[@data-test = 'error']");
+			baseUtilitiesTestClassI.waitForAnElementTextDiscovery(errorLogin, "Epic sadface: Sorry, this user has been locked out.");
+			this.loginErrorText = baseUtilitiesTestClassI.elementTextGrabber(errorLogin);	
+			
+			
+			return this.loginErrorText;
+			
+		}
+		
+		
+		
+		
+		
+		
+
+		//Inside the webpage and logging out
+		Thread.sleep(1000);
+		WebElement burgerMenu  = baseUtilitiesTestClassI.elementGrabber("//button[contains(@id, 'menu')]");
+		baseUtilitiesTestClassI.waitForAnElement(burgerMenu);
+		baseUtilitiesTestClassI.clickTheElement(burgerMenu);
+		WebElement logout = baseUtilitiesTestClassI.elementGrabber("//a[contains(@id, 'logout')]");
+		
+		
+		
+		this.pageTitle = baseUtilitiesTestClassI.getTitle();
+		baseUtilitiesTestClassI.waitForAnElement(logout);
+		Thread.sleep(1000);
+		baseUtilitiesTestClassI.clickTheElement(logout);
+		
+		
+	    Thread.sleep(3000);
+		
+		
+		return this.pageTitle;
+	    
+		
+	}
+	
+	
+	public void sauceDemoTestQuitBrowser()
+	{
+		baseUtilitiesTestClassI.terminateBrowser();
+	}
+	
+
+	
+
+
+
+
+}

@@ -1,0 +1,8 @@
+
+Feature:
+Login with different credentials and capture page title and wrong user info error.
+
+
+
+
+Background:

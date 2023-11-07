@@ -1,0 +1,70 @@
+
+
+
+//		author                                    Umang Bhatnagar     @umangbhatnagar@virtusa.com
+//		*************************************     Here the whole script is written keeping MACOS		    *************************************
+//		*************************************	  in mind. "MMTUtilityMethods" class has been written	    *************************************			
+//		*************************************	  for the low level implementation by segregating into 	    *************************************
+//		*************************************	  different methods. These methods are later called   	    *************************************
+//		*************************************	  as in need in class "MMTChromeAndFireFox"	to come		    *************************************
+//		*************************************	  up with a meaningful script as asked for.					*************************************
+
+
+
+
+package com.avirtusaa;
+
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.DataProvider;
+
+
+public class TestDriverClass {
+
+	
+	private boolean isLogoPresent;
+	private BaseUtilitiesTestClass baseUtilitiesTestClassI;
+
+
+	public TestDriverClass()
+	
+	{
+		System.out.println("TestDriverClass class k consutructor k andar hun aur");
+		System.out.println("*************isne bheja*******************: "+ new Throwable().getStackTrace()[1].getClassName());
+		this.isLogoPresent = false;
+		this.baseUtilitiesTestClassI = new BaseUtilitiesTestClass("Chrome", 2000); 
+		
+		
+	}
+
+	
+	
+	public void sauceDemoTestDriver(String userNameDataProvided, String passwordDataProvided)
+	{
+		
+		System.err.println("Username: "+userNameDataProvided+" : "+"Password: "+passwordDataProvided);
+		baseUtilitiesTestClassI.maximizeBrowser();
+		baseUtilitiesTestClassI.visitPage("https://www.saucedemo.com/");
+		
+		WebElement useName = baseUtilitiesTestClassI.elementGrabber("//input[@id = 'user-name']");
+		WebElement passwordThrown = baseUtilitiesTestClassI.elementGrabber("//input[@id = 'password']"); 
+		WebElement login =  baseUtilitiesTestClassI.elementGrabber("//input[@id = 'login-button']"); 
+
+		baseUtilitiesTestClassI.terminateBrowser();
+		
+		
+		
+		
+		
+	}
+	
+	
+
+	
+
+
+
+
+}

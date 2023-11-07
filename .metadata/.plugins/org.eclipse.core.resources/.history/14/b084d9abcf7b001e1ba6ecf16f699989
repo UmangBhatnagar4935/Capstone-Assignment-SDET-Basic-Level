@@ -1,0 +1,34 @@
+
+Feature:
+Read different sets of login credentials from an external Excel sourcefile and capture page title and wrong user info error.
+
+
+
+
+Background:
+
+Scenario: Login with valid User credentials !!
+
+Given with few user credentials including both valid and invalid user credentials in an external excel file.
+
+When user is done with reading all the login credentials from Excel file,
+
+Then store all that read-information in a local buffer called as Data Provider technically.
+
+And that buffer can be any 2d array sufficing this need.
+
+
+
+
+
+Scenario: Once logged in, capture the title of the pag and verify against as expected value !!
+Given that user successfully logs in,
+Then capture the title of the page and get that verified.
+
+
+
+Scenario:
+And 
+
+ 
+ 

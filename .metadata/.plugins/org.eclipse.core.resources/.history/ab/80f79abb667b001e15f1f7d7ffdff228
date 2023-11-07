@@ -1,0 +1,54 @@
+
+//		author                                    Umang Bhatnagar     @umangbhatnagar@virtusa.com
+//		*************************************     Here the whole script is written keeping MACOS		    *************************************
+//		*************************************	  in mind. "MMTUtilityMethods" class has been written	    *************************************			
+//		*************************************	  for the low level implementation by segregating into 	    *************************************
+//		*************************************	  different methods. These methods are later called   	    *************************************
+//		*************************************	  as in need in class "MMTChromeAndFireFox"	to come		    *************************************
+//		*************************************	  up with a meaningful script as asked for.					*************************************
+
+
+
+package com.avirtusaa;
+
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.testng.Reporter;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class MainTestRunner extends TestDriverClass{
+
+		
+	
+	
+	
+	
+	@BeforeMethod()
+	public void fetchLogoStatus() throws InterruptedException, EncryptedDocumentException, IOException
+	{
+
+		SauceDemoUserCrendentialsDataProviderClass.excelReader();	
+	}
+	
+
+	
+	
+	@Test(dataProvider = "User Credentials", dataProviderClass = SauceDemoUserCrendentialsDataProviderClass.class)
+	public void name(String userNameReceived, String passwordReceived) throws EncryptedDocumentException, IOException
+	{
+		
+		
+		
+	//	assertEquals(isLogoPresent(), true);
+		
+		
+		sauceDemoTestDriver(userNameReceived, passwordReceived);
+		
+		Reporter.log("The test is found to have passed !!");
+	}
+	
+	
+
+}
